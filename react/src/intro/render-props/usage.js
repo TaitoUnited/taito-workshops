@@ -20,7 +20,7 @@ const Usage = () => (
 const Wrapper = styled.div`
   width: 300px;
   height: 300px;
-  background-color: red;
+  background-color: lightcoral;
   display: flex;
   flex-direction: column;
   justify-content: center;
