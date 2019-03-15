@@ -30,7 +30,7 @@ const EXERCISES = {
 
 // ***************** CHANGE THESE TO SWITCH BETWEEN EXERCISES *****************
 
-const ACTIVE_EXAMPLE = EXERCISES.RENDER_PROPS;
+const ACTIVE_EXAMPLE = EXERCISES.COMPOUND;
 const MODE = MODES.INTRO;
 
 // ****************************************************************************
