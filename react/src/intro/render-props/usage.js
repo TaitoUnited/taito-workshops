@@ -4,17 +4,20 @@ import styled from 'styled-components';
 import Mouse from './index';
 
 const Usage = () => (
-  <Wrapper>
-    <Mouse>
-      {({ x, y }) => (
-        <Content>
-          <h1>Mouse position:</h1>
-          <div>X: {x}</div>
-          <div>Y: {y}</div>
-        </Content>
-      )}
-    </Mouse>
-  </Wrapper>
+  <>
+    <h1>Render Props</h1>
+    <Wrapper>
+      <Mouse>
+        {({ x, y }) => (
+          <Content>
+            <h1>Mouse position:</h1>
+            <div>X: {x}</div>
+            <div>Y: {y}</div>
+          </Content>
+        )}
+      </Mouse>
+    </Wrapper>
+  </>
 );
 
 const Wrapper = styled.div`

@@ -4,13 +4,16 @@ import styled from 'styled-components';
 import Dropmenu from './index';
 
 const Usage = () => (
-  <Wrapper>
-    <Dropmenu trigger={<button>Toggle menu</button>}>
-      <Dropmenu.Item>Menu item 1</Dropmenu.Item>
-      <Dropmenu.Item>Menu item 2</Dropmenu.Item>
-      <Dropmenu.Item>Menu item 3</Dropmenu.Item>
-    </Dropmenu>
-  </Wrapper>
+  <>
+    <h1>Compound Components</h1>
+    <Wrapper>
+      <Dropmenu trigger={<button>Toggle menu</button>}>
+        <Dropmenu.Item>Menu item 1</Dropmenu.Item>
+        <Dropmenu.Item>Menu item 2</Dropmenu.Item>
+        <Dropmenu.Item>Menu item 3</Dropmenu.Item>
+      </Dropmenu>
+    </Wrapper>
+  </>
 );
 
 const Wrapper = styled.div`

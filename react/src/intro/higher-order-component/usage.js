@@ -11,6 +11,7 @@ const logout = () => {
 
 const Usage = () => (
   <div>
+    <h1>Higher Order Components</h1>
     <button onClick={login}>Login</button>
     <button onClick={logout}>Logout</button>
   </div>
