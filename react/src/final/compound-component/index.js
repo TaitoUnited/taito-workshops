@@ -18,7 +18,7 @@ class Tabs extends React.Component {
     selectedTab: 0,
   };
 
-  selectTab = (tabIndex: number) => {
+  selectTab = tabIndex => {
     this.setState({ selectedTab: tabIndex });
   };
 
@@ -69,15 +69,15 @@ const TabButton = styled.button`
   cursor: default;
   background: transparent;
   outline: none;
-  color: ${props => props.selected ? 'blue' : '#888'};
+  color: ${props => (props.selected ? 'blue' : '#888')};
   transition: border-color 0.2s ease-in;
   border: none;
-  border-bottom: 4px solid ${props => props.selected ? 'blue' : '#ddd'};
+  border-bottom: 4px solid ${props => (props.selected ? 'blue' : '#ddd')};
 
   &:hover,
   &:focus,
   &:active {
-    border-bottom: 4px solid ${props => props.selected ? 'darkblue' : '#ccc'};
+    border-bottom: 4px solid ${props => (props.selected ? 'darkblue' : '#ccc')};
   }
 `;
 
