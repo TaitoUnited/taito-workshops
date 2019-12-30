@@ -1,19 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { topics } from './data';
 
 interface Props {
-  onTopicPicked: () => any;
+  onClose: () => any;
 }
 
-function TopicPicker({ onTopicPicked }: Props) {
+function TopicPicker({ onClose }: Props) {
   return (
     <Wrapper>
-      <Backdrop />
+      <Backdrop onClick={onClose} />
       <TopicsGrid>
         {topics.map(topic => (
-          <Topic key={topic.slug} to={`/${topic.slug}`} onClick={onTopicPicked}>
+          <Topic key={topic.slug} to={`/${topic.slug}`} onClick={onClose}>
             {topic.label}
           </Topic>
         ))}
@@ -21,6 +21,26 @@ function TopicPicker({ onTopicPicked }: Props) {
     </Wrapper>
   );
 }
+
+const reveal = keyframes`
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const Wrapper = styled.div`
   position: fixed;
@@ -39,6 +59,7 @@ const Backdrop = styled.div`
   backdrop-filter: blur(8px);
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
+  animation: ${fadeIn} 200ms ease-in forwards;
 `;
 
 const TopicsGrid = styled.div`
@@ -51,12 +72,12 @@ const TopicsGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 32px;
-  z-index: 2;
   padding: 32px 0px;
 `;
 
 const Topic = styled(Link)`
-  background-color: ${props => props.theme.primary.light2};
+  cursor: pointer;
+  background-color: ${props => props.theme.primary.light1};
   border-radius: 8px;
   padding: 16px;
   color: #fff;
@@ -67,16 +88,15 @@ const Topic = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+  z-index: 2;
   text-decoration: none;
+  opacity: 0;
+  animation: ${reveal} 200ms ease-in forwards;
+  animation-delay: 100ms;
 
   &:hover {
-    transform: scale(1.05);
-  }
-  &:active {
-    opacity: 0.7;
+    background-color: ${props => props.theme.primary.light2};
   }
 `;
 

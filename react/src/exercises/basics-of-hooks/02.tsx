@@ -4,7 +4,7 @@ import React from 'react';
 
 const Exercise = () => {
   return (
-    <div>Exercise 2</div>
+    <div>Basics of Hooks Exercise 2</div>
   );
 };
 

@@ -9,7 +9,10 @@ const getExerciseList = (slug: string) => {
   const topicData = topicsBySlug[slug];
 
   return topicData
-    ? range(topicData.numOfExercises).map((_, i) => `Exercise ${i + 1}`)
+    ? range(topicData.numOfExercises).map((_, i) => ({
+        num: i < 9 ? `0${i + 1}` : `${i + 1}`,
+        label: `Exercise ${i + 1}`,
+      }))
     : [];
 };
 
@@ -21,7 +24,7 @@ export const useExerciseMatch = () => {
   return {
     topic: topicMatch ? topicsBySlug[topicMatch.params.slug] : null,
     topicExercises: topicMatch ? getExerciseList(topicMatch.params.slug) : null,
-    selectedExercise: exerciseMatch ? exerciseMatch.params.exercise : null,
+    selectedExercise: exerciseMatch ? exerciseMatch.params.exercise : null, // prettier-ignore
     final: !!finalMatch?.isExact,
   };
 };

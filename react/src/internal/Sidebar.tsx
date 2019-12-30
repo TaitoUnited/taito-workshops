@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { HEADER_HEIGHT } from './constants';
 import { useExerciseMatch } from './utils';
 
@@ -8,7 +9,7 @@ interface Props {
 }
 
 function Sidebar({ onTopicSwitch }: Props) {
-  const { topic, topicExercises } = useExerciseMatch();
+  const { topic, topicExercises, selectedExercise } = useExerciseMatch();
 
   return (
     <Wrapper>
@@ -17,10 +18,17 @@ function Sidebar({ onTopicSwitch }: Props) {
       <SidebarContent>
         {topic && <SelectedTopic>{topic.label}</SelectedTopic>}
 
-        {topicExercises && (
+        {topic && topicExercises && (
           <ExerciseList>
             {topicExercises.map(exercise => (
-              <Exercise key={exercise}>{exercise}</Exercise>
+              <Exercise
+                key={exercise.label}
+                isSelected={selectedExercise === exercise.num}
+              >
+                <ExerciseLink to={`/${topic.slug}/${exercise.num}`}>
+                  {exercise.label}
+                </ExerciseLink>
+              </Exercise>
             ))}
           </ExerciseList>
         )}
@@ -70,6 +78,25 @@ const ExerciseList = styled.ol`
   padding: 0;
 `;
 
-const Exercise = styled.li``;
+const Exercise = styled.li<{ isSelected: boolean }>`
+  position: relative;
+  padding: 12px 0px;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: ${props => (props.isSelected ? '""' : '')};
+    position: absolute;
+    left: -16px;
+    height: 100%;
+    width: 6px;
+    background-color: ${props => props.theme.primary.light3};
+  }
+`;
+
+const ExerciseLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+`;
 
 export default Sidebar;

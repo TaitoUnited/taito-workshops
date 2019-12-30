@@ -3,7 +3,7 @@ import React from 'react';
 // Custom Hooks - Exercise 2
 
 const Exercise = () => {
-  return null;
+  return <div>Custom Hooks - Exercise 2</div>;
 };
 
 // ---------------------------- DO NOT MODIFY USAGE ----------------------------

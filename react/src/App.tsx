@@ -20,7 +20,7 @@ const App = () => {
       </Wrapper>
 
       {isTopicPickerVisible && (
-        <TopicPicker onTopicPicked={() => setTopicPickerVisible(false)} />
+        <TopicPicker onClose={() => setTopicPickerVisible(false)} />
       )}
     </>
   );
