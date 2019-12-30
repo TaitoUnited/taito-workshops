@@ -1,27 +1,26 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
-import { useExerciseMatch } from './utils';
 
 interface Props {
   mode: 'final' | 'exercise';
 }
 
 const ModeSwitch = ({ mode }: Props) => {
-  const l = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <Wrapper>
       <SwitchOption
         isActive={mode === 'exercise'}
-        to={`${l.pathname.replace('/final', '')}`}
+        to={`${pathname.replace('/final', '')}`}
       >
         Exercise
       </SwitchOption>
 
       <Gap />
 
-      <SwitchOption isActive={mode === 'final'} to={`${l.pathname}/final`}>
+      <SwitchOption isActive={mode === 'final'} to={`${pathname}/final`}>
         Final
       </SwitchOption>
     </Wrapper>

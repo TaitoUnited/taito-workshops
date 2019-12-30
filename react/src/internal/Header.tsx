@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import ModeSwitch from './ModeSwitch';
 import { useExerciseMatch } from './utils';
-import { useHistory } from 'react-router-dom';
 
 function Header() {
   const { final, selectedExercise } = useExerciseMatch();
