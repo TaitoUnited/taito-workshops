@@ -2,7 +2,7 @@ export const HEADER_HEIGHT = 60;
 
 export const theme = {
   primary: {
-    light3: '#596cb9',
+    light3: '#7a94ff',
     light2: '#464e70',
     light1: '#363b51',
     base: '#242733',

@@ -68,7 +68,7 @@ const SidebarContent = styled.div`
   padding: 16px;
 `;
 
-const SelectedTopic = styled.h1`
+const SelectedTopic = styled.h2`
   font-size: 18px;
   font-weight: 700;
 `;
@@ -83,6 +83,8 @@ const Exercise = styled.li<{ isSelected: boolean }>`
   padding: 12px 0px;
   display: flex;
   align-items: center;
+  color: ${props => (props.isSelected ? props.theme.primary.light3 : '#fff')};
+  font-weight: ${props => (props.isSelected ? 500 : 400)};
 
   &:before {
     content: ${props => (props.isSelected ? '""' : '')};
@@ -91,11 +93,13 @@ const Exercise = styled.li<{ isSelected: boolean }>`
     height: 100%;
     width: 6px;
     background-color: ${props => props.theme.primary.light3};
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 `;
 
 const ExerciseLink = styled(Link)`
-  color: #fff;
+  color: inherit;
   text-decoration: none;
 `;
 
