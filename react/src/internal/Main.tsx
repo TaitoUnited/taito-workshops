@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
+
+import pickExerciseImage from './assets/teaching.svg';
 import { routes } from './data';
 
 function Main() {
@@ -26,7 +28,10 @@ function Main() {
               })}
 
               <Route>
-                <h3>Pick exercise from sidebar</h3>
+                <PickExercise>
+                  <PickExerciseImage src={pickExerciseImage} />
+                  <Info>Pick an exercise from the sidebar</Info>
+                </PickExercise>
               </Route>
             </Switch>
           )}
@@ -40,6 +45,25 @@ const Wrapper = styled.main`
   background-color: ${props => props.theme.primary.base};
   grid-area: main;
   padding: 16px;
+`;
+
+const PickExercise = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`;
+
+const PickExerciseImage = styled.img`
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+`;
+
+const Info = styled.h3`
+  font-size: 20px;
+  text-align: center;
 `;
 
 export default Main;
