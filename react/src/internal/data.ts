@@ -8,7 +8,7 @@ export const topicsBySlug: { [slug: string]: TopicData } = {
   'basics-of-hooks': {
     label: 'Basics of Hooks',
     slug: 'basics-of-hooks',
-    numOfExercises: 4,
+    numOfExercises: 5,
   },
   'custom-hooks': {
     label: 'Custom Hooks',
