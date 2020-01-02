@@ -15,6 +15,11 @@ export const topicsBySlug: { [slug: string]: TopicData } = {
     slug: 'advanced-hooks',
     numOfExercises: 1,
   },
+  'performance': {
+    label: 'Performance',
+    slug: 'performance',
+    numOfExercises: 1,
+  },
 };
 
 const getFilename = (i: number) => (i < 10 ? `0${i}` : `${i}`);
