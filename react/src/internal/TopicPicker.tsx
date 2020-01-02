@@ -72,7 +72,7 @@ const TopicsGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 32px;
-  padding: 32px 0px;
+  padding: 32px;
 `;
 
 const Topic = styled(Link)`
