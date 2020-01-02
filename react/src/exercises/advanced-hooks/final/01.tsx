@@ -4,13 +4,13 @@ import React from 'react';
 
 const API_URL = 'https://swapi.co/api/people/?search=';
 
-interface State {
+interface SearchState {
   status: 'INITIAL' | 'LOADING' | 'ERROR' | 'SUCCESS';
   error: null | string;
   data: null | any[];
 }
 
-const initialState: State = {
+const initialState: SearchState = {
   status: 'INITIAL',
   error: null,
   data: null,
@@ -18,7 +18,9 @@ const initialState: State = {
 
 const Exercise = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
-  const [searchState, setSearchState] = React.useState<State>(initialState);
+  const [searchState, setSearchState] = React.useState<SearchState>(
+    initialState
+  );
 
   const search = React.useCallback(
     async (signal?: AbortSignal) => {
