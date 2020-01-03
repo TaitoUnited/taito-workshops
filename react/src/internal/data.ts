@@ -18,7 +18,7 @@ export const topicsBySlug: { [slug: string]: TopicData } = {
   'performance': {
     label: 'Performance',
     slug: 'performance',
-    numOfExercises: 2,
+    numOfExercises: 3,
   },
 };
 
