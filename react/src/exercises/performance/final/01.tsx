@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Advanced Hooks - Exercise 2 | Final
+// Performance - Exercise 1 | Final
 
 const Inner: React.FC<{ id: string; onClick: () => any }> = React.memo(
   ({ id, onClick }) => {

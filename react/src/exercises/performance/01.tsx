@@ -1,7 +1,7 @@
 import React from 'react';
 
 /*
-Advanced Hooks - Exercise 2
+Performance - Exercise 1
 
 1. Utilize `React.useCallback` and `React.memo` to improve the rendering performance of `Inner` component
    -> The `Inner` component should not render when the counter is incremented
