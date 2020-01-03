@@ -2,8 +2,7 @@ import React from 'react';
 
 // Basics of Hooks - Exercise 5 | Final
 
-const Exercise = () => {
-  const [value, setValue] = React.useState('');
+const useAutogrow = (value: string) => {
   const [height, setHeight] = React.useState();
   const ref = React.useRef<HTMLTextAreaElement>(null);
 
@@ -15,13 +14,22 @@ const Exercise = () => {
     }
   }, [value]);
 
+  const style = { height: height || 'auto' };
+
+  return { ref, style }
+}
+
+const Exercise = () => {
+  const [value, setValue] = React.useState('');
+  const autogrow = useAutogrow(value);
+  
   return (
     <div>
       <textarea
-        ref={ref}
+        ref={autogrow.ref}
         value={value}
         onChange={({ currentTarget }) => setValue(currentTarget.value)}
-        style={{ height: height || 'auto', border: 'none' }}
+        style={{ border: 'none', ...autogrow.style }}
       />
     </div>
   );
