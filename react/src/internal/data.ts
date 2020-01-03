@@ -13,7 +13,7 @@ export const topicsBySlug: { [slug: string]: TopicData } = {
   'advanced-hooks': {
     label: 'Advanced Hooks',
     slug: 'advanced-hooks',
-    numOfExercises: 2,
+    numOfExercises: 3,
   },
   'performance': {
     label: 'Performance',
