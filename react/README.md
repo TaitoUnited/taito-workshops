@@ -5,7 +5,8 @@
 Clone this repo somewhere in your computer and then install the dependencies:
 
 ```sh
-cd taito-workshops
+git clone git@github.com:TaitoUnited/taito-workshops.git
+cd taito-workshops/react
 npm install
 ```
 
@@ -18,7 +19,7 @@ npm start
 1. Open the topic from the left sidebar and pick some topic
 2. Then open the corresponding folder in `src/exercises/`
 3. Start doing the exercises in order from `01.tsx` and up.
-4. DO NOT open the final exercise results inside the `/final` folder until it's time to go through them!
+4. **DO NOT** open the final exercise results inside the `/final` folder until it's time to go through them!
 5. If you get stuck as help from the instructor before peeking inside the final result
 6. You can see the how the final result of the exercise looks and behaves by toggling the mode from `Exercise` to `Final` on the top right corner of the UI
 
