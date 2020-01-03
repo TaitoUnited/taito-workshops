@@ -21,7 +21,7 @@ npm start
 3. Start doing the exercises in order from `01.tsx` and up.
 4. **DO NOT** open the final exercise results inside the `/final` folder until it's time to go through them!
 5. If you get stuck as help from the instructor before peeking inside the final result
-6. You can see the how the final result of the exercise looks and behaves by toggling the mode from `Exercise` to `Final` on the top right corner of the UI
+6. You can see how the final result of the exercise looks and behaves by toggling the mode from **"Exercise"** to **"Final"** on the top right corner of the UI
 
 ## Ideas
 
