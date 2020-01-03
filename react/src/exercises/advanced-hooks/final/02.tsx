@@ -8,14 +8,14 @@ interface SearchState {
   data: null | any[];
 }
 
+const initialState: SearchState = {
+  status: 'INITIAL',
+  error: null,
+  data: null,
+};
+
 const useSwapi = (searchTerm: string) => {
   const API_URL = 'https://swapi.co/api/people/?search=';
-
-  const initialState: SearchState = {
-    status: 'INITIAL',
-    error: null,
-    data: null,
-  };
 
   const [searchState, setSearchState] = React.useState<SearchState>(
     initialState
