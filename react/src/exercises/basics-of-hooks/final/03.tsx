@@ -8,6 +8,7 @@ const initialState = {
 };
 
 type State = typeof initialState;
+
 type Action =
   | { type: 'set-new-animal'; payload: string }
   | { type: 'reset-new-animal' }

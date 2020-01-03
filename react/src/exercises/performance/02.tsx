@@ -3,8 +3,8 @@ import React from 'react';
 /*
 Performance - Exercise 2
 
-1. Utilize dynamic import and `React.lazy` to lazy load `LazyComponent` and `lazyLib`
-2. Remember to use `React.Suspense` for fallback UI while the lazy component is being loaded
+- Utilize dynamic import and `React.lazy` to lazy load `LazyComponent` and `lazyLib`
+- Remember to use `React.Suspense` for fallback UI while the lazy component is being loaded
 */
 
 import LazyComponent from './other/LazyComponent';

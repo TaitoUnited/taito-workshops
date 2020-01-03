@@ -3,7 +3,7 @@ import React from 'react';
 /*
 Performance - Exercise 1
 
-1. Utilize `React.useCallback`, `React.useMemo` and `React.memo` to improve the rendering performance of `Inner` component
+- Utilize `React.useCallback`, `React.useMemo` and `React.memo` to improve the rendering performance of `Inner` component
 -> The `Inner` component should not render when the counter is incremented
 
 TIP: Keep in mind the callback form of the setter function provided by `React.useState`

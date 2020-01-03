@@ -3,7 +3,7 @@ import React from 'react';
 /*
 Performance - Exercise 3
 
-1. Utilizing your knowledge from previous exercises improve the rendering performance
+- Utilizing your knowledge from previous exercises improve the rendering performance
 */
 
 const NUM_OF_CELLS = 1000;

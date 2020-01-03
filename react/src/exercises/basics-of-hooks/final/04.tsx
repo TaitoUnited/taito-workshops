@@ -18,9 +18,11 @@ const messages = {
 };
 
 type Lang = 'en' | 'fi';
-type LangContextValue = undefined | { lang: Lang; setLang: (l: Lang) => any };
+type LangContextValue = { lang: Lang; setLang: (l: Lang) => any };
 
-const LangContext = React.createContext<LangContextValue>(undefined);
+const LangContext = React.createContext<undefined | LangContextValue>(
+  undefined
+);
 
 const LangProvider: React.FC = ({ children }) => {
   const [lang, setLang] = React.useState<Lang>('en');
