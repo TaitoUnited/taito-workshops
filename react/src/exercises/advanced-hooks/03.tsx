@@ -3,7 +3,11 @@ import React from 'react';
 /*
 Advanced Hooks - Exercise 3
 
-- Implement the 
+- Implement the missing pieces inside `AuthProvider` component and `useAuth` hook
+- Fix the context value typings -> remember that the value can be `undefined | AuthContextValue`
+- Get the user data from `localStorage` when initializing the state
+- Persist the user data to `localStorage` after login and when it is updated via `updateUser` function
+- Clear the persisted user data after logout
 */
 
 interface User {
