@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
-import { HEADER_HEIGHT } from './constants';
 import { routes } from './data';
 import { useExerciseMatch } from './utils';
 
 function Description() {
-  const { topic, topicExercises, selectedExercise } = useExerciseMatch();
-  console.log(topic);
+  const { topic, selectedExercise } = useExerciseMatch();
   if (!topic) return null;
 
   const topicRoute = routes.find(r => r.path === `/${topic.slug}`);
@@ -23,7 +20,7 @@ function Description() {
         source={exerciseRoute?.component.description}
         renderers={{
           link: props => (
-            <a href={props.href} target="_blank">
+            <a href={props.href} target="_blank" rel="noopener noreferrer">
               {props.children}
             </a>
           ),
