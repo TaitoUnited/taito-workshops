@@ -56,8 +56,7 @@ const Backdrop = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-  backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(15, 15, 25, 0.9);
   z-index: 1;
   animation: ${fadeIn} 200ms ease-in forwards;
 `;
