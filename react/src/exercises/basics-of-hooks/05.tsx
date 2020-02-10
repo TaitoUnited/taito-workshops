@@ -15,6 +15,9 @@ TIPS:
 
 OPTIONAL:
 - Extract all auto-grow logic into a custom hook
+
+DOCS:
+- [useLayoutEffect](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
 `;
 
 const Exercise = () => {

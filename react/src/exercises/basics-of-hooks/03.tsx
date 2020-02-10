@@ -7,14 +7,14 @@ const description = `
 - You can use the pre-defined types for the reducer state and actions
 
 TIPS:
-- You can define the whole state in one object like commonly done with Redux
+- You can define the whole state in one object (like commonly done with Redux)
 - Try to keep all the state related logic encapsulated inside the reducer
+
+DOCS:
+- [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 `;
 
-const initialState = {
-  newAnimal: '',
-  animals: ['dog', 'cat', 'lion', 'elephant'],
-};
+const initialState = {};
 
 type State = typeof initialState;
 

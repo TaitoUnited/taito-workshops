@@ -4,6 +4,14 @@ const description = `
 **Performance - Exercise 3**
 
 - Utilizing your knowledge from previous exercises to improve the rendering performance
+
+TIPS:
+- Open your DevTools console to see when the cells are rendered
+
+DOCS:
+- [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
+- [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
+- [memo](https://reactjs.org/docs/react-api.html#reactmemo)
 `;
 
 const NUM_OF_CELLS = 1000;

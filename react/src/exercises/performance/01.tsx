@@ -8,6 +8,11 @@ const description = `
 
 TIPS:
 - Keep in mind the callback form of the setter function provided by \`React.useState\` (https://reactjs.org/docs/hooks-reference.html#functional-updates)
+
+DOCS:
+- [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
+- [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
+- [memo](https://reactjs.org/docs/react-api.html#reactmemo)
 `;
 
 interface InnerProps {

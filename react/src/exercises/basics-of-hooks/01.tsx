@@ -10,7 +10,10 @@ const description = `
 
 OPTIONAL:
 - Disallow duplicate animals
-- Allow adding an animal with keyboard only (eg. submit form with Enter)
+- Allow adding an animal with keyboard only (eg. submit the form by pressing Enter key)
+
+DOCS:
+- [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
 `;
 
 

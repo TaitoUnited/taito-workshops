@@ -10,6 +10,10 @@ const description = `
 
 OPTIONAL:
 - Read the initial language value from local storage and persist it there when user changes the language
+
+DOCS:
+- [createContext](https://reactjs.org/docs/context.html#reactcreatecontext)
+- [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
 `;
 
 const messages = {

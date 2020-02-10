@@ -3,7 +3,10 @@ import React from 'react';
 const description = `
 **Basics of Hooks - Exercise 2**
 
-- Utilize \`React.useEffect\` and \`React.useRef\` to auto-focus an input after the component has mounted 
+- Utilize \`React.useEffect\` and \`React.useRef\` to auto-focus an input after the component has mounted
+
+DOCS:
+- [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
 `;
 
 const Exercise = () => {

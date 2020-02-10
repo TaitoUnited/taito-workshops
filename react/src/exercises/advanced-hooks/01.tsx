@@ -12,9 +12,15 @@ const description = `
 NOTE: Since we are using \`abort()\` it's not necessary to add a debounce to the search.
       However, it's normally a good practice to use debounce to limit the number of API calls.
 
-TIP: Use \`React.useEffect\` return/cleanup function to abort the search
+TIPS:
+- Use \`React.useEffect\` return/cleanup function to abort the search
+- Following a state machine like logic for the state of the search helps with reasoning about the code and mitigates invalid states
 
-TIP: Following a state machine like logic for the state of the search helps with reasoning about the code and mitigates invalid states
+DOCS:
+- [Abortable fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch)
+- [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
+- [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
+- [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
 `;
 
 interface SearchState {

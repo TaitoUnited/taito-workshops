@@ -7,6 +7,9 @@ const description = `
 
 - Utilize dynamic import and \`React.lazy\` to lazy load \`LazyComponent\` and \`lazyLib\`
 - Remember to use \`React.Suspense\` for fallback UI while the lazy component is being loaded
+
+DOCS:
+- [lazy](https://reactjs.org/docs/code-splitting.html#reactlazy)
 `;
 
 const Inner = () => {
