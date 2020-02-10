@@ -1,14 +1,13 @@
 import React from 'react';
-
-/*
-Performance - Exercise 2
-
-- Utilize dynamic import and `React.lazy` to lazy load `LazyComponent` and `lazyLib`
-- Remember to use `React.Suspense` for fallback UI while the lazy component is being loaded
-*/
-
 import LazyComponent from './other/LazyComponent';
 import lazyLib from './other/lazy-lib';
+
+const description = `
+**Performance - Exercise 2**
+
+- Utilize dynamic import and \`React.lazy\` to lazy load \`LazyComponent\` and \`lazyLib\`
+- Remember to use \`React.Suspense\` for fallback UI while the lazy component is being loaded
+`;
 
 const Inner = () => {
   const handleClick = () => {
@@ -36,5 +35,7 @@ const Exercise = () => {
 const Usage = () => {
   return <Exercise />;
 };
+
+Usage.description = description;
 
 export default Usage;

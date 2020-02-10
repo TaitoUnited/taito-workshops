@@ -31,11 +31,13 @@ function Description() {
 
       {isOpen && (
         <ReactMarkdown
+          className="md"
           source={
             exerciseRoute?.component.description ||
             '**Description preview is missing - check the code!**'
           }
           renderers={{
+            inlineCode: CodeBlock,
             link: props => (
               <a href={props.href} target="_blank" rel="noopener noreferrer">
                 {props.children}
@@ -52,6 +54,11 @@ const Wrapper = styled.div`
   background-color: ${props => props.theme.primary.dark1};
   grid-area: description;
   padding: 8px 16px;
+
+  & .md {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 `;
 
 const DescriptionHeader = styled.button`
@@ -72,6 +79,12 @@ const DescriptionHeader = styled.button`
   & span {
     margin-left: 4px;
   }
+`;
+
+const CodeBlock = styled.code`
+  padding: 2px 4px;
+  background-color: ${props => props.theme.primary.light1};
+  border-radius: 4px;
 `;
 
 export default Description;

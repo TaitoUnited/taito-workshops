@@ -1,10 +1,10 @@
 import React from 'react';
 
-/*
-Performance - Exercise 3
+const description = `
+**Performance - Exercise 3**
 
 - Utilizing your knowledge from previous exercises to improve the rendering performance
-*/
+`;
 
 const NUM_OF_CELLS = 1000;
 const INITIAL_CELLS = Array(NUM_OF_CELLS).fill(0);
@@ -48,5 +48,7 @@ const Exercise = () => {
 const Usage = () => {
   return <Exercise />;
 };
+
+Usage.description = description;
 
 export default Usage;

@@ -1,16 +1,16 @@
 import React from 'react';
 
-/*
-Basics of Hooks - Exercise 4
+const description = `
+**Basics of Hooks - Exercise 4**
 
-- Utilize `React.createContext` to create a context for storing and updating user's selected language
-- Implement a provider component for that context (see `LangProvider`)
-- Implement a hook that allows accessing and updating the current language (see `useTranslations`)
-- Add a translation helper called `t` that returns the correct message for given key based on the current language
+- Utilize \`React.createContext\` to create a context for storing and updating user's selected language
+- Implement a provider component for that context (see \`LangProvider\`)
+- Implement a hook that allows accessing and updating the current language (see \`useTranslations\`)
+- Add a translation helper called \`t\` that returns the correct message for given key based on the current language
 
 OPTIONAL:
 - Read the initial language value from local storage and persist it there when user changes the language
-*/
+`;
 
 const messages = {
   fi: {
@@ -63,5 +63,7 @@ const Usage = () => {
     </LangProvider>
   );
 };
+
+Usage.description = description;
 
 export default Usage;

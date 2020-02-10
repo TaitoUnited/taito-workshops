@@ -1,14 +1,14 @@
 import React from 'react';
 
-/*
-Advanced Hooks - Exercise 3
+const description = `
+**Advanced Hooks - Exercise 3**
 
-- Implement the missing pieces inside `AuthProvider` component and `useAuth` hook
-- Fix the context value typings -> remember that the value can be `undefined | AuthContextValue`
-- Get the user data from `localStorage` when initializing the state
-- Persist the user data to `localStorage` after login and when it is updated via `updateUser` function
+- Implement the missing pieces inside \`AuthProvider\` component and \`useAuth\` hook
+- Fix the context value typings -> remember that the value can be \`undefined | AuthContextValue\`
+- Get the user data from \`localStorage\` when initializing the state
+- Persist the user data to \`localStorage\` after login and when it is updated via \`updateUser\` function
 - Clear the persisted user data after logout
-*/
+`;
 
 interface User {
   id: string;
@@ -52,9 +52,7 @@ const AuthProvider: React.FC = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={undefined}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={undefined}>{children}</AuthContext.Provider>
   );
 };
 
@@ -145,5 +143,7 @@ const Usage = () => {
     </AuthProvider>
   );
 };
+
+Usage.description = description;
 
 export default Usage;

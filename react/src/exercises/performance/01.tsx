@@ -1,14 +1,14 @@
 import React from 'react';
 
-/*
-Performance - Exercise 1
+const description = `
+**Performance - Exercise 1**
 
-- Utilize `React.useCallback`, `React.useMemo` and `React.memo` to improve the rendering performance of `Inner` component
--> The `Inner` component should not render when the counter is incremented
+- Utilize \`React.useCallback\`, \`React.useMemo\` and \`React.memo\` to improve the rendering performance of \`Inner\` component
+- The \`Inner\` component should not render when the counter is incremented
 
-TIP: Keep in mind the callback form of the setter function provided by `React.useState`
--> https://reactjs.org/docs/hooks-reference.html#functional-updates
-*/
+TIPS:
+- Keep in mind the callback form of the setter function provided by \`React.useState\` (https://reactjs.org/docs/hooks-reference.html#functional-updates)
+`;
 
 interface InnerProps {
   id: string;
@@ -47,5 +47,7 @@ const Exercise = () => {
 const Usage = () => {
   return <Exercise />;
 };
+
+Usage.description = description;
 
 export default Usage;

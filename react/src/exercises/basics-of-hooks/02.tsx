@@ -1,10 +1,10 @@
 import React from 'react';
 
-/*
-Basics of Hooks - Exercise 2
+const description = `
+**Basics of Hooks - Exercise 2**
 
-- Utilize `React.useEffect` and `React.useRef` to auto-focus an input after the component has mounted 
-*/
+- Utilize \`React.useEffect\` and \`React.useRef\` to auto-focus an input after the component has mounted 
+`;
 
 const Exercise = () => {
   return <div>TODO</div>;
@@ -14,5 +14,7 @@ const Exercise = () => {
 const Usage = () => {
   return <Exercise />;
 };
+
+Usage.description = description;
 
 export default Usage;

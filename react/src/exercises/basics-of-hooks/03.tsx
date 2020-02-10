@@ -1,14 +1,15 @@
 import React from 'react';
 
-/*
-Basics of Hooks - Exercise 3
+const description = `
+**Basics of Hooks - Exercise 3**
 
-- Utilize `React.useReducer` instead of `React.useState` to implement the same component as in exercise 1
+- Utilize \`React.useReducer\` instead of \`React.useState\` to implement the same component as in exercise 1
 - You can use the pre-defined types for the reducer state and actions
 
-TIP: You can define the whole state in one object like commonly done with Redux
-TIP: Try to keep all the state related logic encapsulated inside the reducer
-*/
+TIPS:
+- You can define the whole state in one object like commonly done with Redux
+- Try to keep all the state related logic encapsulated inside the reducer
+`;
 
 const initialState = {
   newAnimal: '',
@@ -31,5 +32,7 @@ const Exercise = () => {
 const Usage = () => {
   return <Exercise />;
 };
+
+Usage.description = description;
 
 export default Usage;
