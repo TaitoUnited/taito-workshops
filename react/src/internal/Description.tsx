@@ -67,6 +67,7 @@ const DescriptionHeader = styled.button`
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
+  cursor: pointer;
 
   & span {
     margin-left: 4px;

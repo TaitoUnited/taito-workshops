@@ -1,38 +1,60 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { IoIosArrowDropleftCircle, IoIosSync } from 'react-icons/io';
+
 import { HEADER_HEIGHT } from './constants';
 import { useExerciseMatch } from './utils';
 
 interface Props {
   onTopicSwitch: () => any;
+  onToggleMinimized: () => any;
+  isMinimized: boolean;
 }
 
-function Sidebar({ onTopicSwitch }: Props) {
+function Sidebar({ onTopicSwitch, isMinimized, onToggleMinimized }: Props) {
   const { topic, topicExercises, selectedExercise } = useExerciseMatch();
 
   return (
     <Wrapper>
-      <SwitchTopic onClick={onTopicSwitch}>Switch topic</SwitchTopic>
+      <SwitchTopic onClick={onTopicSwitch}>
+        {isMinimized ? <IoIosSync size={24} /> : 'Switch topic'}
+      </SwitchTopic>
 
       <SidebarContent>
-        {topic && <SelectedTopic>{topic.label}</SelectedTopic>}
+        {topic && (
+          <SelectedTopic>
+            {isMinimized ? topic.label.slice(0, 2) : topic.label}
+          </SelectedTopic>
+        )}
 
         {topic && topicExercises && (
           <ExerciseList>
             {topicExercises.map(exercise => (
-              <Exercise
+              <ExerciseItem
                 key={exercise.label}
                 isSelected={selectedExercise === exercise.num}
               >
                 <ExerciseLink to={`/${topic.slug}/${exercise.num}`}>
-                  {exercise.label}
+                  {isMinimized ? `E${exercise.num}` : exercise.label}
                 </ExerciseLink>
-              </Exercise>
+              </ExerciseItem>
             ))}
           </ExerciseList>
         )}
       </SidebarContent>
+
+      <SidebarFooter>
+        <MinimizeButton onClick={onToggleMinimized}>
+          <IoIosArrowDropleftCircle
+            size={24}
+            style={{
+              transform: `rotate(${isMinimized ? 180 : 0}deg)`,
+              transition: 'transform 200ms ease-in-out',
+            }}
+          />
+        </MinimizeButton>
+      </SidebarFooter>
     </Wrapper>
   );
 }
@@ -55,6 +77,7 @@ const SwitchTopic = styled.button`
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
+  cursor: pointer;
 
   &:hover {
     background-color: ${props => props.theme.primary.light2};
@@ -66,6 +89,7 @@ const SwitchTopic = styled.button`
 
 const SidebarContent = styled.div`
   padding: 16px;
+  flex: 1;
 `;
 
 const SelectedTopic = styled.h2`
@@ -78,7 +102,7 @@ const ExerciseList = styled.ol`
   padding: 0;
 `;
 
-const Exercise = styled.li<{ isSelected: boolean }>`
+const ExerciseItem = styled.li<{ isSelected: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
@@ -103,6 +127,33 @@ const ExerciseLink = styled(Link)`
   color: inherit;
   text-decoration: none;
   padding: 12px 0px;
+`;
+
+const SidebarFooter = styled.div`
+  padding: 0px 16px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const MinimizeButton = styled.button`
+  border: none;
+  margin: none;
+  background: none;
+  padding: 8px;
+  border-radius: 8px;
+  color: ${props => props.theme.primary.light2};
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${props => props.theme.primary.light1};
+    color: ${props => props.theme.primary.light3};
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 `;
 
 export default Sidebar;

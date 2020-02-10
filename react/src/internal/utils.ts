@@ -21,8 +21,6 @@ export const useExerciseMatch = () => {
   const exerciseMatch = useRouteMatch<{ slug: string; exercise: string }>('/:slug/:exercise'); // prettier-ignore
   const finalMatch = useRouteMatch('/:slug/:exercise/final');
 
-  console.log(exerciseMatch);
-
   return {
     topic: topicMatch ? topicsBySlug[topicMatch.params.slug] : null,
     topicExercises: topicMatch ? getExerciseList(topicMatch.params.slug) : null,
