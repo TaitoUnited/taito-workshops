@@ -80,7 +80,6 @@ const ExerciseList = styled.ol`
 
 const Exercise = styled.li<{ isSelected: boolean }>`
   position: relative;
-  padding: 12px 0px;
   display: flex;
   align-items: center;
   color: ${props => (props.isSelected ? props.theme.primary.light3 : '#fff')};
@@ -99,8 +98,11 @@ const Exercise = styled.li<{ isSelected: boolean }>`
 `;
 
 const ExerciseLink = styled(Link)`
+  display: block;
+  width: 100%;
   color: inherit;
   text-decoration: none;
+  padding: 12px 0px;
 `;
 
 export default Sidebar;
