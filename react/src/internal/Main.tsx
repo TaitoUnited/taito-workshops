@@ -30,7 +30,6 @@ function Main() {
               <Route>
                 <PickExercise>
                   <PickExerciseImage src={pickExerciseImage} />
-                  <Info>Pick an exercise from the sidebar</Info>
                 </PickExercise>
               </Route>
             </Switch>
@@ -59,11 +58,6 @@ const PickExerciseImage = styled.img`
   width: 100%;
   max-width: 500px;
   height: auto;
-`;
-
-const Info = styled.h3`
-  font-size: 20px;
-  text-align: center;
 `;
 
 export default Main;

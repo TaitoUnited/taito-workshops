@@ -9,12 +9,17 @@ import { useExerciseMatch } from './utils';
 function Description() {
   const [isOpen, setOpen] = React.useState(true);
   const { topic, selectedExercise } = useExerciseMatch();
+
   if (!topic) return null;
 
   const topicRoute = routes.find(r => r.path === `/${topic.slug}`);
   const exerciseRoute = topicRoute?.routes.find(
     r => r.path === `/${selectedExercise}`
   );
+
+  if (!exerciseRoute) {
+    return <Wrapper>Pick an exercise from the sidebar</Wrapper>;
+  }
 
   return (
     <Wrapper>
