@@ -12,3 +12,11 @@ body {
   height: 100%;
   width: 100%;
 }
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #ddd;
+}

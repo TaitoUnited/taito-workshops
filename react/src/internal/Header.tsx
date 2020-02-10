@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <Wrapper>
-      <Title>⚛︎React workshop</Title>
+      <Title>⚛︎ React workshop</Title>
       {selectedExercise && <ModeSwitch mode={final ? 'final' : 'exercise'} />}
     </Wrapper>
   );

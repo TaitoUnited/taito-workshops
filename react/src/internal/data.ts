@@ -5,6 +5,11 @@ export interface TopicData {
 }
 
 export const topicsBySlug: { [slug: string]: TopicData } = {
+  'basics-of-react': {
+    label: 'Basics of React',
+    slug: 'basics-of-react',
+    numOfExercises: 4,
+  },
   'basics-of-hooks': {
     label: 'Basics of Hooks',
     slug: 'basics-of-hooks',
