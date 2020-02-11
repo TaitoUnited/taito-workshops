@@ -7,6 +7,7 @@ const description = `
 
 DOCS:
 - [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
+- [useRef](https://reactjs.org/docs/hooks-reference.html#useref)
 `;
 
 const Exercise = () => {

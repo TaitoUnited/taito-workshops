@@ -7,9 +7,10 @@ const description = `
 - The \`Inner\` component should not render when the counter is incremented
 
 TIPS:
-- Keep in mind the callback form of the setter function provided by \`React.useState\` (https://reactjs.org/docs/hooks-reference.html#functional-updates)
+- Keep in mind the callback form of the setter function provided by \`React.useState\`
 
 DOCS:
+- [useState](https://reactjs.org/docs/hooks-reference.html#functional-updates)
 - [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback)
 - [useMemo](https://reactjs.org/docs/hooks-reference.html#usememo)
 - [memo](https://reactjs.org/docs/react-api.html#reactmemo)

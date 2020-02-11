@@ -18,6 +18,8 @@ OPTIONAL:
 
 DOCS:
 - [useLayoutEffect](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
+- [getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+- [scrollHeight](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight)
 `;
 
 const Exercise = () => {
