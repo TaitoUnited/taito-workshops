@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Modal from './other/Modal';
 
 const description = `
@@ -6,7 +7,7 @@ const description = `
 
 - Implement a Portal for a modal that is rendered outside of the main React app
 - Implement \`getPortalRoot\` that will get an existing or create a new div element
-- Add a \`'portal-root'\` class name to the div element created in \`getPortalRoot\` (can be used to check if it already exists in the DOM)
+- Add a \`'portal-root'\` id to the div element created in \`getPortalRoot\` (can be used to check if it already exists in the DOM)
 - Get the portal element ref on mount and then use \`ReactDOM.createPortal\` to conditionally render the provided \`Modal\` component
 
 DOCS:

@@ -14,7 +14,7 @@ const getPortalRoot = () => {
   if (el) return el;
 
   el = document.createElement('div');
-  el.classList.add('portal-root');
+  el.id = 'portal-root';
   document.body.appendChild(el);
 
   return el;
