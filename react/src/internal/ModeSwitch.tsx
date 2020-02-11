@@ -20,7 +20,10 @@ const ModeSwitch = ({ mode }: Props) => {
 
       <Gap />
 
-      <SwitchOption isActive={mode === 'final'} to={`${pathname}/final`}>
+      <SwitchOption
+        isActive={mode === 'final'}
+        to={pathname.includes('final') ? pathname : `${pathname}/final`}
+      >
         Final
       </SwitchOption>
     </Wrapper>
