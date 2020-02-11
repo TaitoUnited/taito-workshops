@@ -16,7 +16,6 @@ DOCS:
 - [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
 `;
 
-
 const Exercise = () => {
   return <div>TODO</div>;
 };
