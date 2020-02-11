@@ -14,13 +14,16 @@ DOCS:
 - [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
 `;
 
-const initialState = {};
+const initialState = {
+  animals: [],
+  newAnimal: ''
+};
 
 type State = typeof initialState;
 
 type Action =
   | { type: 'set-new-animal'; payload: string }
-  | { type: 'reset-new-animal' }
+  | { type: 'reset-new-animal' } // NOTE: you might not actually need this ;)
   | { type: 'add-animal' }
   | { type: 'remove-animal'; payload: string };
 
