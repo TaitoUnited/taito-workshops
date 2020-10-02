@@ -11,7 +11,7 @@ DOCS:
 `;
 
 const useSwapi = (/* Add any params if needed */) => {
-  const API_URL = 'https://swapi.co/api/people/?search=';
+  const API_URL = 'https://swapi.dev/api/people/?search=';
   // Implement
   return {};
 };

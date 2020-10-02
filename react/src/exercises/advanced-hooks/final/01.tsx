@@ -2,7 +2,7 @@ import React from 'react';
 
 // Advanced Hooks - Exercise 1 | Final
 
-const API_URL = 'https://swapi.co/api/people/?search=';
+const API_URL = 'https://swapi.dev/api/people/?search=';
 
 interface SearchState {
   status: 'INITIAL' | 'LOADING' | 'ERROR' | 'SUCCESS';

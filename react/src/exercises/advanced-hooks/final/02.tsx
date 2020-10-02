@@ -15,7 +15,7 @@ const initialState: SearchState = {
 };
 
 const useSwapi = (searchTerm: string) => {
-  const API_URL = 'https://swapi.co/api/people/?search=';
+  const API_URL = 'https://swapi.dev/api/people/?search=';
 
   const [searchState, setSearchState] = React.useState<SearchState>(
     initialState
