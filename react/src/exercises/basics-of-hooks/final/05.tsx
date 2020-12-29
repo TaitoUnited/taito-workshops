@@ -3,7 +3,7 @@ import React from 'react';
 // Basics of Hooks - Exercise 5 | Final
 
 const useAutogrow = (value: string) => {
-  const [height, setHeight] = React.useState();
+  const [height, setHeight] = React.useState<number>();
   const ref = React.useRef<HTMLTextAreaElement>(null);
 
   React.useLayoutEffect(() => {
