@@ -6,27 +6,17 @@ const description = `
 **Advanced Patterns - Exercise 1**
 
 - Implement a Portal for a modal that is rendered outside of the main React app
-- Implement \`getPortalRoot\` that will get an existing or create a new div element
-- Add a \`'portal-root'\` id to the div element created in \`getPortalRoot\` (can be used to check if it already exists in the DOM)
-- Get the portal element ref on mount and then use \`ReactDOM.createPortal\` to conditionally render the provided \`Modal\` component
+- Use \`ReactDOM.createPortal\` to conditionally render the provided \`Modal\` component
+- Mount the modal portal into \`document.body\`
 
 DOCS:
 - [Portals](https://reactjs.org/docs/portals.html#usage)
-- [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)
-- [useRef](https://reactjs.org/docs/hooks-reference.html#useref)
-- [document.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
-- [document.body.appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 `;
 
 interface ModalPortalProps {
   isOpen: boolean;
   close: () => any;
 }
-
-const getPortalRoot = () => {
-  let el = null;
-  return el;
-};
 
 const ModalPortal = ({ isOpen, close }: ModalPortalProps) => {
   // Utilize `getPortalRoot` here

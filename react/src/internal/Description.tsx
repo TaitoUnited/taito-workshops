@@ -12,9 +12,9 @@ function Description() {
 
   if (!topic) return null;
 
-  const topicRoute = routes.find(r => r.path === `/${topic.slug}`);
+  const topicRoute = routes.find((r) => r.path === `/${topic.slug}`);
   const exerciseRoute = topicRoute?.routes.find(
-    r => r.path === `/${selectedExercise}`
+    (r) => r.path === `/${selectedExercise}`
   );
 
   if (!exerciseRoute) {
@@ -23,7 +23,7 @@ function Description() {
 
   return (
     <Wrapper>
-      <DescriptionHeader onClick={() => setOpen(prev => !prev)}>
+      <DescriptionHeader onClick={() => setOpen((prev) => !prev)}>
         <IoIosArrowRoundUp
           size={20}
           style={{
@@ -43,7 +43,7 @@ function Description() {
           }
           renderers={{
             inlineCode: CodeBlock,
-            link: props => (
+            link: (props) => (
               <a href={props.href} target="_blank" rel="noopener noreferrer">
                 {props.children}
               </a>
@@ -56,12 +56,14 @@ function Description() {
 }
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.primary.dark1};
   grid-area: description;
   padding: 8px 16px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  ${(p) => p.theme.effects.frostedGlass}
 
   & .md {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
   }
 `;
@@ -71,13 +73,14 @@ const DescriptionHeader = styled.button`
   width: 100%;
   border: none;
   background: none;
-  color: ${props => props.theme.primary.light3};
+  color: ${(props) => props.theme.colors.primary.light};
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 12px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   cursor: pointer;
 
@@ -87,9 +90,11 @@ const DescriptionHeader = styled.button`
 `;
 
 const CodeBlock = styled.code`
-  padding: 2px 4px;
-  background-color: ${props => props.theme.primary.light1};
+  padding: 4px 6px;
   border-radius: 4px;
+  font-size: 14px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  ${p => p.theme.effects.frostedGlassDark}
 `;
 
 export default Description;

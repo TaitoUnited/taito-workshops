@@ -12,7 +12,7 @@ function TopicPicker({ onClose }: Props) {
     <Wrapper>
       <Backdrop onClick={onClose} />
       <TopicsGrid>
-        {topics.map(topic => (
+        {topics.map((topic) => (
           <Topic key={topic.slug} to={`/${topic.slug}`} onClick={onClose}>
             {topic.label}
           </Topic>
@@ -56,7 +56,7 @@ const Backdrop = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(15, 15, 25, 0.9);
+  background-color: rgba(15, 15, 25, 0.8);
   z-index: 1;
   animation: ${fadeIn} 200ms ease-in forwards;
 `;
@@ -76,7 +76,6 @@ const TopicsGrid = styled.div`
 
 const Topic = styled(Link)`
   cursor: pointer;
-  background-color: ${props => props.theme.primary.light1};
   border-radius: 8px;
   padding: 16px;
   color: #fff;
@@ -93,9 +92,11 @@ const Topic = styled(Link)`
   opacity: 0;
   animation: ${reveal} 200ms ease-in forwards;
   animation-delay: 100ms;
+  backdrop-filter: blur(10px);
+  ${(p) => p.theme.effects.frostedGlass}
 
   &:hover {
-    background-color: ${props => props.theme.primary.light2};
+    background: ${(props) => props.theme.colors.primary.light};
   }
 `;
 

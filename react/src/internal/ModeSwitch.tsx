@@ -31,10 +31,10 @@ const ModeSwitch = ({ mode }: Props) => {
 };
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.primary.dark1};
   border-radius: 6px;
   padding: 4px;
   display: flex;
+  ${(p) => p.theme.effects.frostedGlassDark}
 `;
 
 const SwitchOption = styled(Link)<{ isActive: boolean }>`
@@ -46,12 +46,10 @@ const SwitchOption = styled(Link)<{ isActive: boolean }>`
   padding: 8px 12px;
   font-size: 14px;
   color: #fff;
-  background-color: ${props =>
-    props.isActive ? props.theme.primary.light1 : 'transparent'};
+  ${(p) => p.isActive && p.theme.effects.frostedGlass};
 
   &:hover {
-    background-color: ${props =>
-      props.isActive ? props.theme.primary.light1 : props.theme.primary.base};
+    ${(p) => !p.isActive && p.theme.effects.frostedGlassDark};
   }
 `;
 

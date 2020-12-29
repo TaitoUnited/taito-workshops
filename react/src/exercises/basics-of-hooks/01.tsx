@@ -12,6 +12,9 @@ OPTIONAL:
 - Disallow duplicate animals
 - Allow adding an animal with keyboard only (eg. submit the form by pressing Enter key)
 
+TIPS:
+- Use the function version of the setter function returned by \`React.useState\` to modify the prev state
+
 DOCS:
 - [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
 `;

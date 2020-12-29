@@ -30,7 +30,7 @@ function Sidebar({ onTopicSwitch, isMinimized, onToggleMinimized }: Props) {
 
         {topic && topicExercises && (
           <ExerciseList>
-            {topicExercises.map(exercise => (
+            {topicExercises.map((exercise) => (
               <ExerciseItem
                 key={exercise.label}
                 isSelected={selectedExercise === exercise.num}
@@ -60,27 +60,28 @@ function Sidebar({ onTopicSwitch, isMinimized, onToggleMinimized }: Props) {
 }
 
 const Wrapper = styled.aside`
-  background-color: ${props => props.theme.primary.base};
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
+  ${(p) => p.theme.effects.frostedGlass}
 `;
 
 const SwitchTopic = styled.button`
   border: none;
-  background-color: ${props => props.theme.primary.light1};
   border-radius: 4px;
-  height: ${HEADER_HEIGHT - 16}px;
-  margin: 8px 16px;
+  height: ${HEADER_HEIGHT - 24}px;
+  margin: 12px 16px;
   outline: none;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+  ${p => p.theme.effects.frostedGlass}
 
   &:hover {
-    background-color: ${props => props.theme.primary.light2};
+    background-color: ${(props) => props.theme.colors.primary.light};
   }
   &:active {
     opacity: 0.7;
@@ -106,16 +107,17 @@ const ExerciseItem = styled.li<{ isSelected: boolean }>`
   position: relative;
   display: flex;
   align-items: center;
-  color: ${props => (props.isSelected ? props.theme.primary.light3 : '#fff')};
-  font-weight: ${props => (props.isSelected ? 500 : 400)};
+  color: ${(props) =>
+    props.isSelected ? props.theme.colors.primary.light : '#fff'};
+  font-weight: ${(props) => (props.isSelected ? 500 : 400)};
 
   &:before {
-    content: ${props => (props.isSelected ? '""' : '')};
+    content: ${(props) => (props.isSelected ? '""' : '')};
     position: absolute;
     left: -16px;
     height: 100%;
     width: 6px;
-    background-color: ${props => props.theme.primary.light3};
+    background-color: ${(props) => props.theme.colors.primary.light};
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }
@@ -142,13 +144,12 @@ const MinimizeButton = styled.button`
   background: none;
   padding: 8px;
   border-radius: 8px;
-  color: ${props => props.theme.primary.light2};
+  color: ${(props) => props.theme.colors.primary.light};
   outline: none;
   cursor: pointer;
 
   &:hover {
-    background-color: ${props => props.theme.primary.light1};
-    color: ${props => props.theme.primary.light3};
+    ${(p) => p.theme.effects.frostedGlass}
   }
 
   &:active {

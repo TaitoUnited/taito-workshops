@@ -41,9 +41,10 @@ function Main() {
 }
 
 const Wrapper = styled.main`
-  background-color: ${props => props.theme.primary.base};
   grid-area: main;
   padding: 16px;
+  border-top-left-radius: 8px;
+  ${(p) => p.theme.effects.frostedGlass}
 `;
 
 const PickExercise = styled.div`

@@ -9,30 +9,9 @@ interface ModalPortalProps {
   close: () => any;
 }
 
-const getPortalRoot = () => {
-  let el = document.getElementById('portal-root');
-  if (el) return el;
-
-  el = document.createElement('div');
-  el.id = 'portal-root';
-  document.body.appendChild(el);
-
-  return el;
-};
-
 const ModalPortal = ({ isOpen, close }: ModalPortalProps) => {
-  const portalRef = React.useRef<HTMLElement>();
-
-  React.useEffect(() => {
-    const el = getPortalRoot();
-    portalRef.current = el;
-  }, []);
-
-  if (!portalRef.current) return null;
-
   const comp = <Modal close={close} />;
-
-  return isOpen ? ReactDOM.createPortal(comp, portalRef.current) : null;
+  return isOpen ? ReactDOM.createPortal(comp, document.body) : null;
 };
 
 const Exercise = () => {
