@@ -3,10 +3,10 @@ import React from 'react';
 const description = `
 **Advanced Hooks - Exercise 1**
 
-- Use Star Wars API to search for characters based on an input's value (https://swapi.dev/documentation#search)
+- Use Star Wars API to search for characters based on an input's value 
 - Implement the provided \`search\` skeleton function using native \`fetch\`
 - Utilize \`React.useEffect\` to fire up the search when the input value changes
-- Define an abort controller to abort any ongoing effect when a new effect is fired (https://developers.google.com/web/updates/2017/09/abortable-fetch)
+- Define an abort controller to abort any ongoing effect when a new effect is fired
 - Add a button that triggers the search in addition to the input value change
 
 NOTE: Since we are using \`abort()\` it's not necessary to add a debounce to the search.
@@ -17,6 +17,7 @@ TIPS:
 - Following a state machine like logic for the state of the search helps with reasoning about the code and mitigates invalid states
 
 DOCS:
+- [Star Wars API](https://swapi.dev/documentation#search)
 - [Abortable fetch](https://developers.google.com/web/updates/2017/09/abortable-fetch)
 - [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
 - [useEffect](https://reactjs.org/docs/hooks-reference.html#useeffect)

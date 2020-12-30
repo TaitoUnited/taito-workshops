@@ -7,7 +7,7 @@ const description = `
 - The hook should return the \`search\` method and the state of the search so that they can be used in the consuming component
 
 DOCS:
-- [Exracting Hooks](https://reactjs.org/docs/hooks-custom.html#extracting-a-custom-hook)
+- [Extracting Hooks](https://reactjs.org/docs/hooks-custom.html#extracting-a-custom-hook)
 `;
 
 const useSwapi = (/* Add any params if needed */) => {

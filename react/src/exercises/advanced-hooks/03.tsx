@@ -8,6 +8,12 @@ const description = `
 - Get the user data from \`localStorage\` when initializing the state
 - Persist the user data to \`localStorage\` after login and when it is updated via \`updateUser\` function
 - Clear the persisted user data after logout
+
+DOCS:
+- [createContext](https://reactjs.org/docs/context.html#reactcreatecontext)
+- [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
+- [Context with TS](https://kentcdodds.com/blog/how-to-use-react-context-effectively#typescript--flow)
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 `;
 
 interface User {
