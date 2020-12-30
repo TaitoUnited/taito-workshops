@@ -14,6 +14,7 @@ OPTIONAL:
 DOCS:
 - [createContext](https://reactjs.org/docs/context.html#reactcreatecontext)
 - [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
+- [Context with TS](https://kentcdodds.com/blog/how-to-use-react-context-effectively#typescript--flow)
 `;
 
 const messages = {
