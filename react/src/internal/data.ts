@@ -23,7 +23,7 @@ export const topicsBySlug: { [slug: string]: TopicData } = {
   'advanced-patterns': {
     label: 'Advanced Patterns',
     slug: 'advanced-patterns',
-    numOfExercises: 1,
+    numOfExercises: 2,
   },
   performance: {
     label: 'Performance',
