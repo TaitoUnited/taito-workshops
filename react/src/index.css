@@ -26,3 +26,7 @@ a {
 a:hover {
   color: #ddd;
 }
+
+* {
+  box-sizing: border-box;
+}
