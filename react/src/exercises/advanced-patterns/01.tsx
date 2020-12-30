@@ -19,8 +19,8 @@ interface ModalPortalProps {
 }
 
 const ModalPortal = ({ isOpen, close }: ModalPortalProps) => {
-  // Utilize `getPortalRoot` here
-  return isOpen ? null : null; // Add imported `Modal` in conjunction with the portal
+  // Render the `Modal` component into a portal when the `isOpen` prop is true
+  return isOpen ? null : null;
 };
 
 const Exercise = () => {
