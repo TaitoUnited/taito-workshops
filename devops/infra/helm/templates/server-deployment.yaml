@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+
+# Deployments are a higher-level concept that manages ReplicaSets and Pods.
+# This is a core concept in Kubernetes, and Deployments are the recommended way to manage the creation and scaling of Pods.
+kind: Deployment
+
+metadata:
+  name: server
+
+spec:
+  # Tells deployment to run 1 pod matching the template
+  replicas: 1
+
+  # Selectors are used to determine which Pods are controlled by this Deployment
+  selector:
+    matchLabels:
+      app: server
+
+  # Template describes the pods that will be created
+  template:
+    metadata:
+      # These labels are added to all resources created by this template
+      # and can be used to filter resources by label, eg. kubectl get pods -l app=server
+      labels:
+        app: server
+    
+    # The pod spec describes the containers that will be created, telling which image to use, ports to expose, etc.
+    spec:
+      containers:
+        - name: server
+          # We can reference values from values.yaml using the templating syntax
+          image: "{{ .Values.server.image.repository }}:{{ .Values.server.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.server.service.port }}
+          env:
+            - name: PORT
+              value: "3000"

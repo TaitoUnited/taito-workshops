@@ -1,0 +1,18 @@
+client:
+  image:
+    repository: workshop-client
+    tag: "0.0.1"
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 80
+
+server:
+  image:
+    repository: workshop-server
+    tag: "0.0.1"
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 3000
+

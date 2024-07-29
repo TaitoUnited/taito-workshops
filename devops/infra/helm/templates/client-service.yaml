@@ -1,0 +1,16 @@
+apiVersion: v1
+
+# Service is a Kubernetes resource that exposes an application running on a set of Pods as a network service.
+kind: Service
+
+metadata:
+  name: client
+
+# Spec defines the behavior of the service: which pods it should target, which ports it should expose, etc.
+spec:
+  type: {{ .Values.client.service.type }}
+  ports:
+    - port: {{ .Values.client.service.port }}
+      targetPort: {{ .Values.client.service.port }}
+  selector:
+    app: client

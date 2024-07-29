@@ -1,0 +1,5 @@
+apiVersion: v2
+name: workshop-chart
+description: A Helm chart for deploying workshop application
+version: 0.1.0
+appVersion: "1.0"
