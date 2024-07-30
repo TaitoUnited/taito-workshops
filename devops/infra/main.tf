@@ -11,10 +11,10 @@ provider "helm" {
 }
 
 resource "helm_release" "app_release" {
-  name       = "app-release"
-  chart      = "./helm"
-  namespace  = "default"
-  values     = [
+  name      = "app-release"
+  chart     = "./helm"
+  namespace = "default"
+  values = [
     "${file("./helm/values.yaml")}"
   ]
 }

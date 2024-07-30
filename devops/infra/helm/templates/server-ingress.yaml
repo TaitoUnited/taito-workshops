@@ -1,26 +1,15 @@
 apiVersion: networking.k8s.io/v1
-
-# Ingress is a Kubernetes resource that manages external access to services in a cluster, typically HTTP.
 kind: Ingress
-
 metadata:
-  name: ingress
+  name: server-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
-
 spec:
   rules:
     - host: taito-devops-workshop.local
       http:
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: client
-                port:
-                  number: {{ .Values.client.service.port }}
-          - path: /api/(.*)
+          - path: /api/(.*) # Remove /api prefix
             pathType: Prefix
             backend:
               service:
