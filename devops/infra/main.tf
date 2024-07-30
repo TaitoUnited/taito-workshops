@@ -9,12 +9,3 @@ provider "helm" {
     config_context = "minikube"
   }
 }
-
-resource "helm_release" "app_release" {
-  name      = "app-release"
-  chart     = "./helm"
-  namespace = "default"
-  values = [
-    "${file("./helm/values.yaml")}"
-  ]
-}
