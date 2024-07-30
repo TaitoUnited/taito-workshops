@@ -1,5 +1,7 @@
 # DevOps Workshop
 
+This workshop is designed to help you get started with DevOps tools and practices.
+
 ## Pre-requisites
 
 Install the following tools before the workshop:
@@ -13,4 +15,12 @@ Install the following tools before the workshop:
 
 ## Getting started
 
-TODO
+We will cover the following topics:
+
+- **Exercise 1**: Building and running images with Docker
+- **Exercise 2**: Running containerized application with Docker Compose
+- **Exercise 3**: Introduction to Kubernetes with Minikube
+- **Exercise 4**: Infrastructure as code with Terraform and Helm
+- **Exercise 5**: Taito CLI
+
+You should go through the exercises in order, as they build on top of each other.
