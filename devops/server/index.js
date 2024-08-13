@@ -12,10 +12,6 @@ app.get("/data", (req, res) => {
   res.json({ message: "Hello World!" });
 });
 
-app.get("/health", (req, res) => {
-  res.json({ ok: true });
-});
-
 app.get("*", (req, res) => {
   console.log(`Request to ${req.path} was not found`);
   res.status(404).json({ message: "Not Found" });
